@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EASYJOURNEY website</title>
+
+    <!-- font awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <!-- custom css file link -->
+    <link rel="stylesheet" href="style.css"> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+
+<body>  <!-- header section starts -->
+<header>
+<!-- <div id="menu-bar" class="fas fa-bars"></div> -->
+    <a href="#" class="logo"><span>E</span>asyjourney</a>
+
+    <nav class="navbar">
+<a href="#home">home</a>
+<a href="#book">book</a>
+<a href="#train_data">train_data</a> 
+
+ <a href="#tourist_places">Tourist Places</a> 
+
+<a href="#contact">contact</a>
+</nav>
+
+<div class="icons">
+    <i class="fas fa-search" id="search-btn"></i>
+    <i class="fas fa-user" id="login-btn"></i>
+</div>
+
+<form action="" class="search-bar-container">
+    <input type="search" id="search-bar" placeholder="search here...">
+    <label for="search-bar" class="fas fa-search"></label>
+</form>
+
+</header>
+ <!-- header section ends  -->
+
+ <!-- login form container -->
+
+ <div class="login-form-container">
+<i class="fas fa-time" id="form-close"></i>
+    <form class="form">   <h3>login</h3>
+         <!-- <input type="text" class="box"  id="username" placeholder="enter your email">  -->
+        <input type="text" class="box"  id="lusername" placeholder="enter username">
+        <input type="email" class="box"  id="lemail" placeholder="enter your email">
+        <input type="password" class="box" id="lpassword" placeholder="enter your password">
+        <button type="submit" class="mybtn" id="lsignUp" >login now</button>
+        <!-- <input type="checkbox" id="remember"> -->
+        <!-- <label for="remember" class="remember">remember me</label> -->
+        <!-- <p class="small">forgot password? <a href="#" class="small" id="click">click here</a></p> -->
+        <p class="small">don't have an account? <a href="reg.html" class="small" id="reg">register now</a></p>
+    </form>
+
+ </div>
+
+ 
+
+
+
+<section class="home hometour" id="home">
+    
+        <!-- <div class="bg-img">
+
+        </div> -->
+    
+    <div class="content">
+        <h3 class="black">travelling is worthwhile</h3>
+        <p class="black">make your train experience unforgettable with us</p>
+        <!-- <a href="#" class="btn">search train</a> -->
+    </div>
+
+    <!-- <div class="controls">
+        <span class="vid-btn "data-src=""></span>
+        <span class="vid-btn "data-src=""></span>
+        
+    </div> -->
+
+   <div class="video-container">
+        <video src="\index\greenerytrainvid.mp4" id="video-slider" loop autoplay muted></video> 
+         <video src="" id="video-slider" loop autoplay muted></video>  
+       
+</section>
+
+<!-- home section ends 
+    <-- custom js file link  -->
+    <section class="book" id="book">
+
+        <h1 class="heading">
+            <span>b</span>
+            <span>o</span>
+            <span>o</span>
+            <span>k</span>
+            <span class="space"></span>
+            <span>n</span>
+            <span>o</span>
+            <span>w</span>
+         
+        </h1>
+<div class="row">
+    <!-- https://imgs.search.brave.com/0nhGWb7_G_mhU62sjKD3MOSjQkdFqvoKFKzISAit17M/rs:fit:800:457:1/g:ce/aHR0cHM6Ly90aHVt/YnMuZHJlYW1zdGlt/ZS5jb20vYi9yYWls/d2F5LXRpY2tldHMt/Ym9va2luZy1yYWls/cm9hZC10cmF2ZWwt/Y29uY2VwdC10cmFp/bi1tb2Rlcm4taGln/aC1zcGVlZC1wYXNz/ZW5nZXItdHJhaW4t/dHJhY2tzLWlzb2xh/dGVkLXdoaXRlLWJh/Y2tncm91bmQtNTky/OTE2NjYuanBn -->
+    <div class="image">
+        <img src="https://tse2.mm.bing.net/th?id=OIP.YUsQAXUZASVyLTFXM-tO3gHaGm&pid=Api&P=0" alt="">
+    </div>
+    <!-- https://tse2.mm.bing.net/th?id=OIP.ZNrSDKDXmo4QMEfcQZZ1AQHaDn&pid=Api&P=0 -->
+<form>
+    <div class="inputBox">
+        <h3>where to</h3>
+        <input type="text" id="to" class="border"name="myDestination" placeholder="place name">
+    </div>
+    <div class="inputBox">
+        <h3>where from</h3>
+        <input type="text" id="from" class="border"name="myDestination" placeholder="place name">
+    </div>
+    <div class="inputBox"> 
+        <h3>Date</h3>
+        <input type="date" id="date" class="border" name="leavingDate" >
+    </div>
+ 
+
+</form>
+<button type="submit" id="submitBtn" class="mybtn" onclick="train_data()">book now</button>
+</div>
+
+  
+    
+    <!-- <section class="train_data" id="train_data"> -->
+        <h1 class="text-center">SEARCH YOUR TRAIN</h1>
+        
+        <div id="table_train">
+        <table class="table table-bordered">
+            <thead class="table-dark p-lg-5" id="t_head">
+              
+            </thead>
+            <tbody id="table_body">
+              
+                
+            </tbody>
+        </table>
+    </div>
+<!-- </section> -->
+</section>
+
+<!-- contact section starts  -->
+
+<section class="contact" id="contact">
+  
+<h1 class="heading">
+    <span>c</span>
+    <span>o</span>
+    <span>n</span>
+    <span>t</span>
+    <span>a</span>
+    <span>c</span>
+    <span>t</span>
+</h1>
+
+<div class="row">
+    <div class="image ">
+        <img src="https://imgs.search.brave.com/Q0aQsKQy2P3UR0gw6OV2awCHUJTomQSbtphiIRpDBvs/rs:fit:746:225:1/g:ce/aHR0cHM6Ly90c2Ux/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5B/WFlXeS1KUnRKZjJt/X1pERjZ2MjJRSGFF/dCZwaWQ9QXBp" alt="">
+    </div>
+    <form action="">
+        
+        <div class="inputBox cont ">
+            <input type="text" placeholder="subject">
+        </div>
+        <textarea placeholder="message" class="inputBox"  id="" cols="30" rows="10"></textarea>
+        <input type="submit" class="mybtn" value="send message">
+    </form>
+</div>
+</section>
+
+
+
+
+<section class="tourist_places hometour" id="tourist_places">
+<h1 class="heading">
+    <span>S</span>
+    <span>e</span>
+    <span>a</span>
+    <span>r</span>
+    <span>c</span>
+    <span>h</span>
+    <span class="space"></span>
+    <span>T</span>
+    <span>r</span>
+    <span>a</span>
+    <span>i</span>
+    <span>n</span>
+</h1>
+<div class="content">
+<p class="search black">Want to have additional fun?
+
+</p>
+<p class="search black">Explore more ...
+
+</p>
+</div>
+<button class="mybtn"><a href="tourist.html">search tourist destinations</a></button>
+</section>
+</body>
+<script src="script.js"></script>
+<script src="api.js"></script>
+<script type="module">
+	// Import the functions you need from the SDKs you need
+	import { initializeApp } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-app.js";
+	import { getDatabase, update, ref } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-database.js";
+	import { getAuth, createUserWithEmailAndPassword,signInWithEmailAndPassword,signOut } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-auth.js";
+	// TODO: Add SDKs for Firebase products that you want to use
+	// https://firebase.google.com/docs/web/setup#available-libraries
+  
+	// Your web app's Firebase configuration
+	// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+	const firebaseConfig = {
+	  apiKey: "AIzaSyBTIy94nnn1Lns2_-MKlnfq1FHU5BoY0-w",
+	  authDomain: "easyjourney5.firebaseapp.com",
+	  projectId: "easyjourney5",
+	  storageBucket: "easyjourney5.appspot.com",
+	  messagingSenderId: "156791614191",
+	  appId: "1:156791614191:web:550d6e733bec16fec3c91a",
+	  measurementId: "G-LGQPNZ6D9X"
+	};
+  
+	// Initialize Firebase
+	const app = initializeApp(firebaseConfig);
+	// const analytics = getAnalytics(app);
+    const database =getDatabase(app);
+	const auth = getAuth(); 
+	// console.log(app)
+	
+	
+	  
+	  // ----- Login code start	  
+		document.getElementById("lsignUp").addEventListener("click", function() {
+		var username = document.getElementById("lusername").value;
+			var email =  document.getElementById("lemail").value;
+			var password = document.getElementById("lpassword").value;
+  
+			signInWithEmailAndPassword(auth, email, password)
+			.then((userCredential) => {
+			  // Signed in 
+			  const user = userCredential.user;
+			  console.log(user);
+			  alert(user.email+" Login successful!!!");
+			  document.getElementById('logout').style.display = 'block';
+			  // ...
+			})
+			.catch((error) => {
+			  const errorCode = error.code;
+			  const errorMessage = error.message;
+			  console.log(errorMessage);
+			  alert(errorMessage);
+			});		  		  
+		});
+		// ----- End
+		</script>
+    <!-- <script src="reg.js"></script> -->
+  
+    </html>  
+    
+    <!-- <script>
+       const form=document.getElementById('submitBtn');
+       const date=document.getElementById('date');
+       const to=document.getElementById('to');
+       const from=document.getElementById('from');
+       form.addEventListener("submit",function(e){
+           e.preventDefault();
+           const dateValue=date.value;
+           const toValue=to.value;
+           const fromValue=from.value;
+           // const dateValue=date.value;
+           localStorage.setItem('to',toValue);
+           localStorage.setItem('from',fromValue);
+           localStorage.setItem('date',dateValue);
+           window.location.href="trainapi.html";
+       })
+   </script> -->

@@ -1,0 +1,64 @@
+:root{
+    --orange:#ffa500;
+}
+body{
+    margin: 0;
+    padding: 0;
+background-color: #fff;
+}
+.signupform{
+    width: 300px;
+    box-shadow: 0 0 3px 0 rgba(0,0,0,0.3);
+    background: #fff;
+    padding: 20px;
+    margin: 8% auto 0;
+    text-align: center;
+    /* color: #fff; */
+    border-radius: 10px;
+
+}
+.h1{
+    color:var(--orange);
+    margin-bottom: 30px;
+
+}
+.input-box{
+border-radius:10px ;
+padding: 10px;
+margin: 10px 0;
+width: 80%;
+border: 1px solid var(--orange);
+outline: none;
+justify-content: center;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-around;
+}
+/* .btn{
+    
+        /* font-size: 1.7rem; */
+    /* margin-top : 1rem; */
+/* margin-left: ; */
+        /* display: inline-block; */
+        /* background: var(--orange); */
+        /* color: #fff; */
+    /* cursor: pointer */
+        /* padding: .8rem 3rem; */
+        /* border: .2rem solid var(--orange); */
+/* border-radius: 8px;
+}  */
+.signup-button{
+    border: .2rem solid var(--orange);
+    border-radius: 8px;
+    cursor: pointer;
+    background: var(--orange);
+}
+.back{
+    border: .2rem solid var(--orange);
+    border-radius: 8px;
+    cursor: pointer;
+    background: var(--orange);
+}
+    

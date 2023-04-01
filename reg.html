@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>register</title>
+    <link rel="stylesheet" href="reg.css">
+</head>
+<body>
+    <div class="signupform">
+        <h1 class="h1"> Sign Up Now </h1>
+        <form action="">
+            <input type="username" class="input-box" id="username" placeholder="'your username">
+            <input type="email" class="input-box" id="email" placeholder="'your email">
+            <input type="password" class="input-box" id="password" placeholder="'your password">
+       <!-- <p><span><input type="checkbox"></span> I agree to the terms and services</p> -->
+       
+       <div class=" flex btn">
+        <button  type="submit" class="signup-button btn" id="signup">Sign up</button>
+        <button class="back btn"><a href="index.html">Go back </a></button>
+      </div>
+<!-- <hr><p class="or">OR</p> -->
+        </form>
+    </div>
+
+  
+</body>
+<!-- <script src="reg.js"></script> -->
+
+<script type="module">
+	// Import the functions you need from the SDKs you need
+	import { initializeApp } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-app.js";
+	import { getDatabase, set, ref } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-database.js";
+	import { getAuth, createUserWithEmailAndPassword,signInWithEmailAndPassword,signOut } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-auth.js";
+	// TODO: Add SDKs for Firebase products that you want to use
+	// https://firebase.google.com/docs/web/setup#available-libraries
+  
+	// Your web app's Firebase configuration
+	// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+	const firebaseConfig = {
+	  apiKey: "AIzaSyBTIy94nnn1Lns2_-MKlnfq1FHU5BoY0-w",
+	  authDomain: "easyjourney5.firebaseapp.com",
+	  projectId: "easyjourney5",
+	  storageBucket: "easyjourney5.appspot.com",
+	  messagingSenderId: "156791614191",
+	  appId: "1:156791614191:web:550d6e733bec16fec3c91a",
+	  measurementId: "G-LGQPNZ6D9X"
+	};
+  
+	// Initialize Firebase
+	const app = initializeApp(firebaseConfig);
+	const database = getDatabase(app);
+	const auth = getAuth(); 
+	// console.log(app)
+	
+		//----- New Registration code start	  
+		document.getElementById("signup").addEventListener("click", function(e) {
+			var email =  document.getElementById("email").value;
+			var password = document.getElementById("password").value;
+		var username = document.getElementById("username").value;
+		e.preventDefault()
+			//For new registration
+			createUserWithEmailAndPassword(auth, email, password)
+			.then((userCredential) => {
+			  // Signed in 
+			  const user = userCredential.user;
+		  // set(ref(database,'users/'+user.uid),{
+		  //   username:username,
+		  //   email:email
+		  // })
+			  console.log(user);
+			  alert("Registration successful!!");
+			  // ...
+			})
+			.catch((error) => {
+			  const errorCode = error.code;
+			  const errorMessage = error.message;
+			  // ..
+			  console.log(errorMessage);
+			  alert(error);
+			});		  		  
+		});
+		// ----- End
+	  
+	 
+		</script>
+</html>

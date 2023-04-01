@@ -1,0 +1,444 @@
+ @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,700;1,600&display=swap');
+:root{
+    --orange:#ffa500;
+}
+ *{
+    font-family: 'Nunito',sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    outline: none; border: none;
+    text-decoration: none;
+    transition: all .2s linear;
+    /* color: #fff; */
+    /* background-color: #fff; */
+    /* font-size: larger; */
+ }
+
+
+
+*::selection{
+    background: var(--orange);
+    color: #fff;
+    /* background-color:#fff ; */
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 6rem;
+    scroll-behavior: smooth;
+}
+/* .bg-img{
+    background-image: url(./train4curly.jpg);
+    background-size: cover;
+    height: 100vh;
+} */
+
+/* .home{
+    background-image: /index/train4curly.jpg;
+} */
+ section{
+    padding: 2rem 9%;
+
+}
+
+.heading{
+    text-align: center;
+    padding: 2.5rem 0;
+
+}
+
+.heading span{
+    font-size: 3.5rem;
+    background:rgba(255,165, 0,.2);
+    color: var(--orange);
+    border-radius: .5rem;
+    padding: .2rem 1rem; 
+     margin: 1rem;
+    display:inline-block ;
+
+}
+.heading span .space{
+    background: none;
+}
+header{
+    position: fixed;
+    top: 0; left: 0;right: 0;
+     background: #333; 
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 9%;
+
+}
+
+
+a{ 
+    color: #fff;
+   
+}
+header .logo{
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: #fff;
+    text-transform: uppercase;
+    background-color: rgb(29, 33, 35)
+}
+
+header .logo span{
+    color:orange;
+    background-color: rgb(29, 33, 35)
+}
+.navbar{
+    display: flex;
+}
+.navbar a{
+    display: flex;
+    border-radius: .5rem;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    /* background: #222; */
+    background-color: rgb(51, 51, 51);
+    color: #fff; 
+    font-size: 2rem;
+    margin: 0.8rem; 
+    /* background-color: rgb(29, 33, 35) */
+   /* background :rgba(255,165, 0,.2); */
+}
+  .navbar a:hover{
+    color: var(--orange);
+}
+header .navbar .active{
+    clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
+}
+header .icons i{
+    font-size: 2.5rem;
+    color:#fff;
+    cursor: pointer;
+    margin-right: 2rem;
+    background-color: rgb(29, 33, 35)
+     background-color: rgb(29, 33, 35)
+}
+header .icons i:hover{
+    color:var(--orange);  
+}
+
+header .search-bar-container{
+    position: absolute;
+    top:100%;left: 0;right: 0;
+    padding: 1.5rem 2rem;
+    background: #333;
+    border-top: .1rem solid rgba(255, 255, 255, .2);
+    display:flex ;
+    align-items:center;
+    z-index: 1001;
+    clip-path:polygon(0 0 ,100% 0,100% 0,0 0);
+}
+.search-bar-container.active{
+    clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
+}
+header .search-bar-container #search-bar{
+    width: 100%;
+    padding: 1rem;
+    text-transform: none;
+    color: #333;
+    font-size: 1.7rem;
+    border-radius: .5rem;
+}
+header .search-bar-container label{
+    color: #fff;
+    cursor: pointer;
+    font-size: 3rem;
+    margin-left: 1.5rem;
+}
+header .search-bar-container label:hover{
+    color: var(--orange);
+}
+body{
+    height: 200rem;
+}
+
+.container{
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+.login-form-container{
+    position: fixed;
+    top:-120%;
+    left: 0;
+    z-index: 10000;
+    min-height: 100vh;
+    width: 100%;
+    background: rgba(0, 0, 0,0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login-form-container.active{
+    top: 0;
+}
+.login-form-container form{
+    margin: 2rem;
+    padding: 1.5rem 2rem;
+    border-radius: .5rem;
+    background: #fff;
+    width: 50rem;
+}
+ .login-form-container form h3{
+    font-size: 3rem;
+    color: #444;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 1rem 0;
+}
+ .login-form-container form .box{
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.7rem;
+    color: #333;
+    margin: .6rem 0;
+    border: .1rem solid rgba(0, 0, 0,0.3);
+    text-transform: none;
+}
+.login-form-container .box:focus{
+    border-color: var(--orange);
+}
+.login-form-container form #remember{
+    margin: 2 rem 0;
+}
+.remember{
+    color: #333;
+    
+}
+.login-form-container form label{
+     font-size: 1.5rem;  
+} 
+
+
+.small{
+    font-size: 0.9rem;
+}
+.mybtn{
+    font-size: 1.7rem;
+margin-top: 1rem;
+    display: inline-block;
+    background: var(--orange);
+    color: #fff;
+cursor: pointer;
+    padding: .8rem 3rem;
+    border: .2rem solid var(--orange);
+}
+
+.mybtn:hover{
+     background: rgba(255,165, 0,.2); 
+    color:var(--orange) ;
+}
+
+
+.login-form-container form .mybtn{
+    display: block;
+     width:100%; 
+}
+.login-form-container form p {
+    padding: 0.5rem 0;
+    font-size: 1.5rem;
+    color: #666;
+}
+.login-form-container form p a{
+    color: var(--orange); 
+}
+  .login-form-container form p a:hover{
+    color: #333;
+    text-decoration:underline ; 
+} 
+ .login-form-container form #click:hover{
+    color: #333;
+    text-decoration:underline ;} 
+
+     #form-close{
+        position: absolute;
+        top: 2rem;
+        right: 3rem;
+        font-size: 5rem;
+        cursor: pointer;
+        color: #fff;
+        /* align-items: center;
+        display: flex;
+        justify-content: center; */
+
+    }
+
+
+
+     
+ 
+.hometour{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    position: relative;
+    z-index: 0;
+}
+
+
+.hometour .content{
+    text-align: center;
+}
+.home .content h3{
+    font-size: 4.5rem;
+    color: #fff;
+    text-transform: uppercase;
+    text-shadow:0.3rem 0.5rem rgba(0, 0, 0,0.1) ;
+}
+
+.hometour.content p{
+    font-size: 2.5rem;
+    color: #fff;
+   padding: 5rem 0;
+    text-shadow:0.3rem 0.5rem rgba(0, 0, 0,0.1) ;
+}
+.tourist_places .content p{
+    font-size: 2.5rem;
+    color: black;
+   padding: 5rem 0;
+    text-shadow:0.3rem 0.5rem rgba(0, 0, 0,0.1) ;
+}
+.home .black{
+    color: #fff;
+    font-size: 5rem;
+
+}
+.tourist_places .black{
+    color:black;
+    font-size: 5rem;
+
+}
+.home .video-container video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+
+body{
+    height: 300rem;
+}
+
+.book .row{
+    display: flex;
+    gap:1.5rem;
+    /* margin-left: ; */
+    /* position: relative; */
+}
+
+img{
+    max-width: 100%;
+    max-height: 100%;
+    /* position: absolute; */
+}
+.book .row .image{
+
+    flex:1 1 40rem;
+width: auto;
+height: auto;
+}
+
+.contact .row .image{
+
+    flex: 40rem;
+width: 50%;
+height: 50%;
+}
+
+
+.book .row .image{
+    flex:1 1 40rem;
+}
+
+.contact .row .image{
+    flex:1 1 40rem;
+}
+.image img{
+    width: 100%;
+    /* display: inline-flex;
+    margin-left: 30px;
+    justify-self: flex-start; */
+}
+
+.contact img{
+    width: 100%;
+    /* display: inline-flex;
+    margin-left: 30px;
+    justify-self: flex-start; */
+}
+.book .row form{
+    flex:1 1 40rem;
+    padding: 2rem;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0,0.1);
+    border-radius: .5rem;
+}
+.contact .row form{
+    flex:1 1 40rem;
+    padding: 3rem;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0,0.1);
+    border-radius: .5rem;
+}
+
+.book .row form .inputBox{
+    padding: .5rem 0;
+}
+
+
+
+.contact .row form .inputBox{
+    padding: .5rem 0;
+}
+.book .row .inputBox{
+    font-size: 2rem;
+    padding: 1rem 0;
+    color: #666 ;
+}
+
+.conatct .row .inputBox{
+    font-size: 2rem;
+    padding: 1rem 0;
+    color: #666 ;
+}
+ /* .inputbox input{
+    width: 100%;
+    padding:1rem  ;
+    border: .1rem solid rgba(0, 0, 0,0.1);
+    font-size: 1.7rem;
+    color: #333;
+    text-transform: none;
+} */
+
+.border{ 
+    /* it is actually the input box */
+     width: 100%;
+    padding:1rem  ;
+    border: .1rem solid rgba(0, 0, 0,0.1);
+    font-size: 1.7rem;
+    color: #333;
+    text-transform: none; 
+    margin-bottom:12px;
+}
+th, td{
+    
+    padding: 15px;
+}
+
+
+
+    
